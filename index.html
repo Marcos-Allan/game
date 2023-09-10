@@ -6,23 +6,29 @@
     <title>Pedra, papel ou tesoura</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
+    <!-- BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
-        <div id="game">
-            <h1>Escolha um e tenha sorte de ganhar</h1>
+    <div id="telaGame" class="text-center  d-flex flex-column justify-content-center font-monospace bg-1 c-5">
+        <div class="row">
+          <div id="game" class="col p-5 text-center position-relative lh-lg fs-3">
+            Jokenpo
+          </div>
         </div>
-        <aside>
-            <section id="pedra">
-                Pedra
-            </section>
-            <section id="papel">
-                Papel
-            </section>
-            <section id="tesoura">
-                Tesoura
-            </section>
-        </aside>
-    </main>
+        <div class="row position-absolute bottom-0 w-100 border-top border-top-5 border-dark-subtle">
+          <div class="col h-75 p-5 player bg-2 fs-3">
+            Pedra
+          </div>
+          <div class="col h-75 p-5 player bg-4 fs-3">
+            Papel
+          </div>
+          <div class="col h-75 p-5 player bg-3 fs-3">
+            Tesoura
+          </div>
+        </div>
+        <div id="placar" class="text-center position-absolute top-0 start-50 translate-middle mt-5 fs-4">Placar: <span id="score">0</span></div>
+      </div>
 </body>
 </html>

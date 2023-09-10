@@ -4,10 +4,10 @@
 }
 
 :root{
-    --cor1: #1b418c;
-    --cor2: #79818c;
-    --cor3: #060a0d;
-    --cor4: #434f59;
+    --cor1: #4e4ad9;
+    --cor2: #6662d9;
+    --cor3: #494c8c;
+    --cor4: #f20707;
     --cor5: #f2f2f2;
 }
 
@@ -16,44 +16,46 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Pixel', Arial, sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
-main{
+.bg-1{
+    background-color: var(--cor1);
+}
+.c-1{
+    color: var(--cor1);
+}
+
+.bg-2{
+    background-color: var(--cor2);
+}
+.c-2{
+    color: var(--cor2);
+}
+
+.bg-3{
+    background-color: var(--cor3);
+}
+.c-3{
+    color: var(--cor3);
+}
+
+.bg-4{
+    background-color: var(--cor4);
+}
+.c-4{
+    color: var(--cor4);
+}
+
+.bg-5{
+    background-color: var(--cor5);
+}
+.c-5{
+    color: var(--cor5);
+}
+
+#telaGame{
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
-    position: relative;
-    color: var(--cor5);
-}
-
-main div#game{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-main aside{
-    display: flex;
-    height: auto;
-    width: 100%;
-    position: absolute;
-    bottom: 0%;;
-}
-
-main aside section {
-    background-color: var(--cor3);
-    min-height: 300px;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    border: 1px solid var(--cor1);
-    color: var(--cor5);
 }

@@ -1,8 +1,9 @@
-const choices = [...document.querySelectorAll('section')]
+const choices = [...document.querySelectorAll('.player')]
 const divGame = document.querySelector('#game')
+let textPlacar = document.querySelector('#placar')
+let placar = 0
 let yo = undefined
 let maq = undefined
-
 
 function choiceGame(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
@@ -44,16 +45,23 @@ function calcularResultado(p1, p2) {
     // GAME OVER
     if((p1 == 0 && p2 == 1)||(p1 == 1 && p2 == 2)||(p1 == 2 && p2 == 0)){
         divGame.innerHTML = '<p>Voce: '+yo+'<br>maquina: '+maq+'<br>Derrota</p>'
+        placar++
+        textPlacar.innerText = `Placar: ${placar}`
+        if(placar == 10){
+            alert('VOCÊ GANHOU')
+        }
     }
 
     // EMPATE
     else if((p1 == 0 && p2 == 2)||(p1 == 1 && p2 == 0)||(p1 == 2 && p1 == 1 )){
-        divGame.innerHTML = '<p>Voce: '+yo+'<br>maquina: '+maq+'<br>Vitória</p>'
+        divGame.innerHTML = '<p>Voce: '+yo+'<br>maquina: '+maq+'<br>Vitoria</p>'
     }
 
     // VITÓRIA
     else if((p1 == 0 && p2 ==0)||(p1 == 1 && p1 == 1)||(p2 == 2 && p2 == 2)){
         divGame.innerHTML = '<p>Voce: '+yo+'<br>maquina: '+maq+'<br>Empate</p>'
+        placar--
+        textPlacar.innerText = `Placar: ${placar}`
     }
 
     // alert('VOCÊ: '+yo+' JOGO: '+maq)
